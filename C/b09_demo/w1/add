@@ -1,0 +1,6 @@
+if test $# -ne 2
+then
+    echo usage: $0 x y >&2
+    exit 1
+fi
+expr $1 + $2

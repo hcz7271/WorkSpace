@@ -1,0 +1,7 @@
+for i in *
+do
+    if test -f "$i" && test `wc -1 <"$i"` -eq 5
+    then
+	echo "$i"
+    fi
+done

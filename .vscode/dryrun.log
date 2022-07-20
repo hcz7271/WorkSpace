@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/hcz/Desktop/WorkSpace'
+make: Leaving directory `/Users/hcz/Desktop/WorkSpace'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+

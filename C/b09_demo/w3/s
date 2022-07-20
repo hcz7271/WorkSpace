@@ -1,0 +1,7 @@
+for i in *
+do
+    if test `wc -l <"$i"` -eq 3
+    then
+	echo "$i"
+    fi
+done

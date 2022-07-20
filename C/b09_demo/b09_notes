@@ -1,0 +1,85 @@
+lecture 1
+
+ls
+
+cat
+
+< direct in
+> direct out
+
+output channel
+
+pwd -> absolute pathname
+absolute pathname
+relative pathname
+
+rm [arbitrary pathname]
+remove file
+has to be a file
+-f suppresse error message
+
+rmdir [arbitrary pathname]
+remove directory
+directory has to be empty
+
+cp [arbitrary pathname] [arbitrary pathname]
+
+mv [arbitrary pathname] [arbitrary pathname]
+rename command
+source and target don't have to be in the same directory
+
+Software tools
+    do one thing well
+    are small
+    interface cleanly
+
+Software tools principles
+    1. Write small programs that do one thing well.
+    2. Expect the output of every program to become the input to another, as yet
+       unknown, program.
+        Don't clutter output with extraneous information. Say what you're asked to
+        -- no more, no less.
+    3. Make programs' input formats easy to generate or type.
+        Avoid stringently columnar or binary input formats.
+        Don't insist on interactive input.
+        Supply good defaults. (etc. sort)
+    4. Use programs to write programs.
+        Use high-level languages.
+        Use regular expressions for all pattern matching.
+
+• In unix, we can connect programs using a pipe, which is a kernel data structure which
+    is a buffer but has the special property that it can be used for i/o rediction.
+• Many unix tools are designed as "filter"
+
+sort [pathname] 
+yields a sorted file on stdout
+sort -k2 [pathname] sorted by lastname instead of first name
+sort -f [pathname] case-insensitive sort
+these options can be combined
+
+sed
+• a stream editor, it performs transformations on the data as it goes by, like a filter,
+    without modifying the file on disk
+• sed command "s", for "subtitude" -- it does a search and replace using regex
+• sed 's/searching string/replacing string/other options'
+• sed 's/\(.*\) \(.*\)/\2, \1/' replace the first match and second match
+
+who | wc -l
+• wc "word count"
+• -l "only display the line count"
+
+command line
+• "globbing" unlucky name for how the shell parses commands. It's the expansion of
+    filename patterns. 文件名扩展，通配符
+• '*' matches any number of any char
+• '?' matches any one char
+• filename start with a dot '.' needs special treatment by adding the "-a" option
+
+man pages
+
+grep
+• globally search a regular expression and print
+
+tr
+• text replace
+• does character-level substitution
